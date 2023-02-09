@@ -77,6 +77,9 @@ def plrandom():
 ################################### creating window ###########################
 win = tk.Tk()
 
+main_icon = tk.PhotoImage(file='main logo.gif')
+win.iconphoto(True, main_icon)
+
 lbl_player = tk.Label(win, text="avalable choices:")
 lbl_player.pack()
 
