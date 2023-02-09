@@ -79,6 +79,7 @@ win = tk.Tk()
 
 main_icon = tk.PhotoImage(file='main logo.gif')
 win.iconphoto(True, main_icon)
+win.title('R,P,S')
 
 lbl_player = tk.Label(win, text="avalable choices:")
 lbl_player.pack()
