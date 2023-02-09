@@ -77,6 +77,8 @@ def plrandom():
 ################################### creating window ###########################
 win = tk.Tk()
 
+win.resizable(False, False)
+
 main_icon = tk.PhotoImage(file='main logo.gif')
 win.iconphoto(True, main_icon)
 win.title('R,P,S')
@@ -85,13 +87,17 @@ lbl_player = tk.Label(win, text="avalable choices:")
 lbl_player.pack()
 
 ######################## create frame and player buttons ######################
+rock_icon = tk.PhotoImage(file='rock.png')
+paper_icon = tk.PhotoImage(file='paper.png')
+scissors_icon = tk.PhotoImage(file='scissors.png')
+
 frame = tk.Frame(win)
 frame.columnconfigure(0, weight=1)
 
-plrock = tk.Button(frame, text="rock", padx=10, pady=10, command=plrock)
-plpaper = tk.Button(frame, text="paper", padx=10, pady=10, command=plpaper)
-plscissors = tk.Button(frame, text="scissors", padx=10, pady=10, command=plscissors)
-plrandom = tk.Button(frame, text="random", padx=10, pady=10, command=plrandom)
+plrock = tk.Button(frame,image=rock_icon, padx=10, pady=10, command=plrock)
+plpaper = tk.Button(frame, image=paper_icon, padx=10, pady=10, command=plpaper)
+plscissors = tk.Button(frame, image=scissors_icon, padx=10, pady=10, command=plscissors)
+plrandom = tk.Button(frame, text="random choice",image=main_icon, padx=10, pady=10, compound="bottom", command=plrandom)
 
 plrock.grid(row=0, column=0)
 plpaper.grid(row=0, column=1)
