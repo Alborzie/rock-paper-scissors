@@ -85,6 +85,10 @@ lbl_player = tk.Label(win, text="avalable choices:")
 lbl_player.pack()
 
 ######################## create frame and player buttons ######################
+rock_ico = tk.PhotoImage(file='rock.ico')
+paper_ico = tk.PhotoImage(file='paper.ico')
+scissors_ico = tk.PhotoImage(file='scissors.ico')
+
 frame = tk.Frame(win)
 frame.columnconfigure(0, weight=1)
 
